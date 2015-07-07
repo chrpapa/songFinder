@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Goodbedford Song Finder</title>
 
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -18,13 +18,36 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container">
+
+      <div class="row">
+        <form class="col-sm-8 col-sm-offset-2 text-center">
+          <h1 class="jumbotron">Song Finder</h1>
+          <input id="songInput" type="text" autofocus required>
+          <input id="submitBtn" type="submit" class="" value="submit">
+        </form>
+        <img id="loading" src='loading2.gif' alt='loading'class=" col-xs-8 col-xs-offset-2 text-center">
+
+      </div>
+      <div id="song-container" class="row">
+      </div>
+
+    </div>
+
+    <script type="text/template" id="song-template">
+      <div class="col-sm-8 col-sm-offset-2 ">
+        <div class="top-margin-20 btmBorder"><img class="img-responsive  class="col-xs-2" src="<%= img %>"><span class="artist">Artist: <%= artist %></span><span class="title">Song:<%= title %></span><a href="<%= play %>">Preview</a></div>
+      </div>
+    </script>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="scripts.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <script src="scripts.js"></script>
 	
   </body>
 </html>
