@@ -17,8 +17,8 @@ form{
   margin-bottom: 2em;
 }
 .jumbotron{
-  background-color: #543B45;
-  color: #6F8041;
+  background-color: rgba(52,152,219,1.0);
+  color: white;
 }
 
 #song-container{
